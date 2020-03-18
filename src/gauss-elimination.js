@@ -224,6 +224,7 @@ class gauss_elimination extends Component {
                 }
             }
             else {
+                var X = [];
                 for (i = 0; i < n; i++) {
                     X[i] = "non-available";
                 }
@@ -279,6 +280,15 @@ class gauss_elimination extends Component {
                                             <MDBDropdownItem href="/jacobi">Jacobi Iteration Method</MDBDropdownItem>
                                             <MDBDropdownItem href="/gauss-seidel">Gauss Seidel Iteration Method</MDBDropdownItem>
                                             <MDBDropdownItem href="/conjugate">Conjugate Gradient Method</MDBDropdownItem>
+                                        </MDBDropdownMenu>
+                                    </MDBDropdown>
+                                    <MDBDropdown>
+                                        <MDBDropdownToggle nav caret>
+                                            <span className="mr-2" style={{ fontWeight: "500" }}>Interpolation and Extrapolation</span>
+                                        </MDBDropdownToggle>
+                                        <MDBDropdownMenu >
+                                            <MDBDropdownItem href="/newton-divide">Newton's Divided-Differences</MDBDropdownItem>
+                                            <MDBDropdownItem href="/lagrange">Lagrange Interpolation</MDBDropdownItem>
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                     {/*}<MDBDropdown>

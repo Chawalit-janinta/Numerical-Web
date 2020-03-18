@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
@@ -29,6 +29,8 @@ const jacobi = require('./routes/jacobi');
 const gauss_seidel = require('./routes/gauss-seidel');
 const gauss_elimination = require('./routes/gauss-elimination');
 const gauss_jordan = require('./routes/gauss-jordan');
+const newton_divide = require('./routes/ndd');
+const lagrange = require('./routes/lagrange');
 
 app.use('/graphical', graphical);
 app.use('/bisection', bisection);
@@ -41,6 +43,8 @@ app.use('/jacobi', jacobi );
 app.use('/gauss-seidel', gauss_seidel );
 app.use('/gauss-elimination', gauss_elimination );
 app.use('/gauss-jordan', gauss_jordan );
+app.use('/newton-divide', newton_divide );
+app.use('/lagrange', lagrange );
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

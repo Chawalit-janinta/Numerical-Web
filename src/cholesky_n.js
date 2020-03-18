@@ -178,22 +178,8 @@ class cholesky extends Component {
                                             <span className="mr-2" style={{ fontWeight: "500" }}>Interpolation and Extrapolation</span>
                                         </MDBDropdownToggle>
                                         <MDBDropdownMenu >
-                                            <MDBDropdown>
-                                                <MDBDropdownToggle nav caret style={{ color: 'black' }}>
-                                                    <span>Newton's divided-differences</span>
-                                                </MDBDropdownToggle>
-                                                <MDBDropdownMenu>
-                                                    <MDBDropdownItem href="/linear">Linear</MDBDropdownItem>
-                                                </MDBDropdownMenu>
-                                            </MDBDropdown>
-                                            <MDBDropdown>
-                                                <MDBDropdownToggle nav caret style={{ color: 'black' }}>
-                                                    <span>Lagrange polynomials</span>
-                                                </MDBDropdownToggle>
-                                                <MDBDropdownMenu>
-                                                    <MDBDropdownItem href="/linear">Linear</MDBDropdownItem>
-                                                </MDBDropdownMenu>
-                                            </MDBDropdown>
+                                            <MDBDropdownItem href="/newton-divide">Newton's Divided-Differences</MDBDropdownItem>
+                                            <MDBDropdownItem href="/lagrange">Lagrange Interpolation</MDBDropdownItem>
                                         </MDBDropdownMenu>
                                     </MDBDropdown>
                                 </MDBFormInline>

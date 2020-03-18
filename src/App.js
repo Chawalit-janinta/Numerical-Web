@@ -16,8 +16,8 @@ import cholesky from "./cholesky";
 import jacobi from "./jacobi";
 import gauss_seidel from "./gauss-seidel";
 import conjugate from "./conjugate";
-import linear from "./linear";
-
+import ndd from "./ndd";
+import lag from "./lagrange";
 //import cholesky_n from "./cholesky_n";
 
 class App extends Component {
@@ -43,7 +43,8 @@ class App extends Component {
           <Route path="/jacobi" component={jacobi} />
           <Route path="/gauss-seidel" component={gauss_seidel} />
           <Route path="/conjugate" component={conjugate} />
-          <Route path="/linear" component={linear} />
+          <Route path="/newton-divide" component={ndd} />
+          <Route path="/lagrange" component={lag} />
         </Switch>
       </Router>
     );
