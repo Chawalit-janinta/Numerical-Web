@@ -50,7 +50,7 @@ class onepoint extends Component {
     exam() {
         //this.state.xl = this.state.xr = this.state.fxl = this.state.fxr = this.state.fxm = this.state.xm = this.state.error = [];
         this.setState({data:'',value:''});
-        axios.get('http://localhost:5000/onepoint/')
+        axios.get('http://192.168.99.100:5000/onepoint/')
             .then(response => {
                 this.state.exam[0] = response.data[response.data.length - 1].equation;
                 this.state.x[0] = parseFloat(response.data[response.data.length - 1].x0);
@@ -77,7 +77,7 @@ class onepoint extends Component {
 
             console.log(eq);
 
-            axios.post('http://localhost:5000/onepoint/add', eq)
+            axios.post('http://192.168.99.100:5000/onepoint/add', eq)
                 .then(res => console.log(res.data));
         }
     }

@@ -44,7 +44,7 @@ class lagrange extends Component {
         //this.state.xl = this.state.xr = this.state.fxl = this.state.fxr = this.state.fxm = this.state.xm = this.state.error = [];
         if (this.state.size != '') {
             var i = 0;
-            axios.get('http://localhost:5000/lagrange/')
+            axios.get('http://192.168.99.100:5000/lagrange/')
                 .then(response => {
 
                     for (i = 0; i < response.data.length; i++) {
@@ -84,7 +84,7 @@ class lagrange extends Component {
 
             console.log(eq);
 
-            axios.post('http://localhost:5000/lagrange/add', eq)
+            axios.post('http://192.168.99.100:5000/lagrange/add', eq)
                 .then(res => console.log(res.data));
         }
     }

@@ -78,7 +78,7 @@ class graphical extends Component {
     }
 
     exam() {
-        axios.get('http://localhost:5000/graphical/')
+        axios.get('http://192.168.99.100:5000/graphical/')
             .then(response => {
                 this.state.exam[0] = response.data[response.data.length - 1].equation;
                 this.setState({ data: response.data[response.data.length - 1].equation })
@@ -97,7 +97,7 @@ class graphical extends Component {
 
             console.log(eq);
 
-            axios.post('http://localhost:5000/graphical/add', eq)
+            axios.post('http://192.168.99.100:5000/graphical/add', eq)
                 .then(res => console.log(res.data));
         }
     }
